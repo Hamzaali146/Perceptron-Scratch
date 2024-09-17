@@ -23,10 +23,10 @@ class Perceptron:
 
         y_ = np.where(y > 0 , 1, 0)
         for _ in range(self.n_iters):
-            for idx, x_i in enumerate(X):
+            for index, x_i in enumerate(X):
                 linear_output = np.dot(x_i, self.weights) + self.bias
                 y_predicted = self.activation_func(linear_output)
-                error=y_[idx] - y_predicted
+                error=y_[index] - y_predicted
                 if error!=0:
                     update = self.lr * (error)
                     self.weights += update * x_i
