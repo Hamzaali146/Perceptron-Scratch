@@ -56,8 +56,7 @@ if __name__ == "__main__":
         X, y, test_size=0.2, random_state=123
     )
 
-    p = Perceptron(learning_rate=0.01, n_iters=1000)
+    p = Perceptron(learning_rate=0.01, n_iters=2000)
     p.fit(X_train, y_train)
     predictions = p.predict(X_test) 
-
-    print("Perceptron classification accuracy", accuracy(y_test, predictions))
+    print("Perceptron Variant 2.O accuracy", accuracy(y_test, predictions))
